@@ -1,0 +1,75 @@
+import discord
+from discord.ext import commands
+import random
+
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
+
+# Diccionario de manualidades
+manualidades = {
+    "Botellas plasticas": "Macetas para plantas",
+    "Carton": "Organizadores y cajas",
+    "Latas": "Portalapices",
+    "Papel usado": "Papel reciclado"
+}
+
+
+# Diccionario de tipos de energia
+tipos_energia = {
+    "Solar": "Energia obtenida del sol",
+    "Eolica": "Energia obtenida del viento",
+    "Hidraulica": "Energia obtenida del agua",
+    "Geotermica": "Energia obtenida del calor interno de la Tierra"
+}
+
+
+# Diccionario de durabilidad de la basura
+durabilidad_basura = {
+    "Papel": "2 a 5 meses aproximadamente",
+    "Lata de aluminio": "80 a 200 años aproximadamente",
+    "Botella plastica": "450 años o mas",
+    "Vidrio": "Miles de años"
+}
+
+
+
+# Funcion de manualidades aleatorias
+def manualidad_aleatoria():
+    material = random.choice(list(manualidades.keys()))
+    return(material, ":", manualidades.get(material))
+
+
+# Funcion de energia aleatoria
+def energia_aleatoria():
+    energia = random.choice(list(tipos_energia.keys()))
+    return(energia, ":", tipos_energia.get(energia))
+
+
+# Funcion de durabilidad aleatoria
+def basura_aleatoria():
+    basura = random.choice(list(durabilidad_basura.keys()))
+    return(basura, ":", durabilidad_basura.get(basura))
+
+@bot.event
+async def on_ready():
+    print(f'Bot conectado como {bot.user}')
+
+
+@bot.command()
+async def energy(ctx):
+    await ctx.send(energia_aleatoria())
+
+
+@bot.command()
+async def craft(ctx):
+    await ctx.send(manualidad_aleatoria())
+
+
+@bot.command()
+async def trash(ctx):
+    await ctx.send(basura_aleatoria())
+
+
+bot.run("TOKEN")
