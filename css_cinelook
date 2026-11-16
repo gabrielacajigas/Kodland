@@ -1,0 +1,545 @@
+
+/* =================================
+   CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #202027;
+    color: #F5F3F0;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Inter', sans-serif;
+}
+
+section {
+    padding: 75px 8%;
+}
+
+.etiqueta {
+    color: #FD98FB;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion h2 {
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.titulo-seccion > p:last-child {
+    color: #5988FF;
+    font-size: 16px;
+}
+
+
+/* =================================
+   ENCABEZADO
+================================= */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: #25252D;
+    border-bottom: 1px solid #35353E;
+}
+
+.logo {
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #F5F3F0;
+}
+
+.logo span {
+    color: #FD98FB;
+}
+
+.logo .punto {
+    color: #D6FF6B;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #D6FF6B;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FD98FB;
+}
+
+
+/* =================================
+   PORTADA
+================================= */
+
+.portada {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background:
+        radial-gradient(
+            circle at 85% 40%,
+            #44323A,
+            #202027 60%
+        );
+}
+
+.contenido-portada {
+    max-width: 620px;
+}
+
+.portada h2 {
+    font-size: 52px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.portada h2 span {
+    color: #FD98FB;
+}
+
+.texto-portada {
+    max-width: 530px;
+    color: #BDBBC1;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.boton-principal {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #FD98FB;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-principal:hover {
+    background-color: #FD98FB;
+    transform: translateY(-3px);
+}
+
+.boton-principal span {
+    margin-left: 10px;
+}
+
+
+/* DECORACIÓN DE PORTADA */
+
+.decoracion-portada {
+    width: 280px;
+    height: 280px;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(145deg, #FD98FB, #5988FF);
+    border-radius: 45% 55% 60% 40%;
+    transform: rotate(-5deg);
+}
+
+.icono-cine {
+    font-size: 95px;
+    transform: rotate(5deg);
+}
+
+.decoracion-portada p {
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    max-width: 200px;
+    transform: rotate(5deg);
+}
+
+.burbuja {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #5988FF;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.burbuja-uno {
+    top: 5px;
+    right: -15px;
+}
+
+.burbuja-dos {
+    bottom: 15px;
+    left: -20px;
+}
+
+
+/* =================================
+   BUSCADOR
+================================= */
+
+.buscador {
+    background-color: #282830;
+    text-align: center;
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    margin: auto;
+    padding: 8px;
+    background-color: #35353F;
+    border: 1px solid #494952;
+    border-radius: 12px;
+}
+
+.icono-busqueda {
+    color: #FD98FB;
+    font-size: 28px;
+    padding: 0 12px;
+}
+
+.barra-busqueda input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-family: 'Inter ', sans-serif;
+    font-size: 16px;
+}
+
+.barra-busqueda input::placeholder {
+    color: #5988FF;
+}
+
+.barra-busqueda button {
+    padding: 13px 25px;
+    background-color: #FD98FB;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.barra-busqueda button:hover {
+    background-color: #FD98FB;
+}
+
+
+/* =================================
+   RECOMENDADOR
+================================= */
+
+.recomendador {
+    background-color: #202027;
+}
+
+.formulario {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    background-color: #2C2C35;
+    border: 1px solid #41414A;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    box-shadow: 0 12px 30px #00000025;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo label {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.campo select {
+    width: 100%;
+    padding: 14px;
+    background-color: #393943;
+    color: #D6FF6B;
+    border: 1px solid #FD98FB;
+    border-radius: 9px;
+    font-family: 'Inter ', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.campo select:focus {
+    outline: 2px solid #FD98FB;
+    border-color: transparent;
+}
+
+.boton-buscar {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* =================================
+   CATEGORÍAS
+================================= */
+
+.categorias {
+    background-color: #282830;
+}
+
+.lista-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.categoria {
+    padding: 25px;
+    background-color: #35353F;
+    border: 1px solid #45454E;
+    border-radius: 14px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.categoria:hover {
+    transform: translateY(-5px);
+    border-color: #FD98FB;
+    background-color: #D6FF6B;
+}
+
+.categoria span {
+    font-size: 35px;
+}
+
+.categoria h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.categoria p {
+    color: #BDBBC1;
+    font-size: 14px;
+}
+
+
+/* =================================
+   RESULTADOS
+================================= */
+
+.resultados {
+    text-align: center;
+    background-color: #202027;
+}
+
+.mensaje-resultados {
+    max-width: 650px;
+    margin: auto;
+    padding: 45px 25px;
+    background-color: #2C2C35;
+    border: 1px dashed #62616B;
+    border-radius: 15px;
+}
+
+.mensaje-resultados span {
+    font-size: 55px;
+}
+
+.mensaje-resultados h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.mensaje-resultados p {
+    color: #5988FF;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   PIE DE PÁGINA
+================================= */
+
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    background-color: #25252D;
+    border-top: 1px solid #393942;
+    color: #5988FF;
+}
+
+footer h2 {
+    color: #D6FF6B;
+    letter-spacing: 2px;
+}
+
+footer h2 span {
+    color: #FD98FB;
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+
+/* =================================
+   ADAPTACIÓN A TABLETS
+================================= */
+
+@media (max-width: 900px) {
+
+    .portada h2 {
+        font-size: 40px;
+    }
+
+    .decoracion-portada {
+        width: 220px;
+        height: 220px;
+    }
+
+    .lista-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =================================
+   ADAPTACIÓN A CELULARES
+================================= */
+
+@media (max-width: 650px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .portada {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 65px;
+    }
+
+    .portada h2 {
+        font-size: 36px;
+    }
+
+    .texto-portada {
+        font-size: 16px;
+    }
+
+    .decoracion-portada {
+        width: 200px;
+        height: 200px;
+        margin-top: 15px;
+    }
+
+    .icono-cine {
+        font-size: 65px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 27px;
+    }
+
+    .barra-busqueda {
+        flex-wrap: wrap;
+    }
+
+    .barra-busqueda input {
+        width: 70%;
+    }
+
+    .barra-busqueda button {
+        width: 100%;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+        padding: 22px;
+    }
+
+    .boton-buscar {
+        grid-column: auto;
+    }
+
+    .lista-categorias {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .categoria {
+        padding: 18px;
+    }
+
+    .categoria h3 {
+        font-size: 17px;
+    }
+
+    .categoria p {
+        font-size: 13px;
+    }
+
+}
+
+ 
